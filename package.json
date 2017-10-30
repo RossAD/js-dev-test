@@ -21,6 +21,7 @@
   "homepage": "https://github.com/PointCareLLC/js-developer-project#readme",
   "dependencies": {
     "express": "^4.16.2",
+    "helmet": "^3.9.0",
     "next": "^4.0.1",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",

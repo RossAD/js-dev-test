@@ -15,7 +15,7 @@ const ManifestList = ({manifest}) => (
         </li>
       ))}
     </ul>
-    <style jsx >{`
+    <style jsx global>{`
       .container {
         width: 400px;
         height: 800px;
