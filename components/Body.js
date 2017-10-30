@@ -3,6 +3,9 @@ import React from 'react';
 export default class Body extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      manifest:[]
+    };
     this.fetchManifest = this.fetchManifest.bind(this);
   }
 
@@ -24,6 +27,19 @@ export default class Body extends React.Component {
   }
 
   render() {
-    return <div>hello world!</div>;
+    const { manifest } = this.state;
+    const manifestList = manifest.map(item => (
+      <li key={item.id}>
+        <span>
+          <strong>Make:</strong> {item.make}<br />
+          <strong>Model:</strong> {item.model}<br />
+          <strong>Color:</strong> {item.color}<br />
+          <strong>Time Entered:</strong> {item.enteredAt}
+        </span>
+      </li>
+    ));
+    return <div>
+      <ul>{manifestList}</ul>
+    </div>;
   }
 }
