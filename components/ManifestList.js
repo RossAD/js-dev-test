@@ -22,6 +22,7 @@ const ManifestList = ({manifest}) => (
         overflow: auto;
         border: 1px solid black;
         border-radius: 5px;
+        box-shadow: 2px 2px 3px black;
       }
        
       h2 {
