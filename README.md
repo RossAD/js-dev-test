@@ -57,6 +57,6 @@ The **back-end** is Express 4. Nothing special going here.
 
   Show us some style! Jazz up this manifest by adding some CSS.
 
-- [ ] **Keep out the bad guys**
+- [x] **Keep out the bad guys**
 
   We want to keep our users safe otherwise they will not trust us and our application. See if you can prevent a CSRF attack on your shiny new application. **Hint:** This can be accomplished without touching the client code.
