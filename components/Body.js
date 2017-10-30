@@ -1,4 +1,5 @@
 import React from 'react';
+import ManifestList from './ManifestList.js';
 
 export default class Body extends React.Component {
   constructor(props) {
@@ -26,22 +27,17 @@ export default class Body extends React.Component {
     this.setState({ manifest });
   }
 
+  handleClick = (e) => {
+    e.preventDefault();
+    this.fetchManifest();
+  }
+
   render() {
     const { manifest } = this.state;
-    const manifestList = manifest.map(item => (
-      <li key={item.id}>
-        <span>
-          <strong>Make:</strong> {item.make}<br />
-          <strong>Model:</strong> {item.model}<br />
-          <strong>Color:</strong> {item.color}<br />
-          <strong>Time Entered:</strong> {item.enteredAt}
-        </span>
-      </li>
-    ));
     return (
       <div>
-        <button onClick={this.fetchManifest}>Refresh Manifest</button>
-        <ul>{manifestList}</ul>
+        <button onClick={this.handleClick}>Refresh Manifest</button>
+        <ManifestList manifest={manifest} />
       </div>
     );
   }
