@@ -38,8 +38,11 @@ export default class Body extends React.Component {
         </span>
       </li>
     ));
-    return <div>
-      <ul>{manifestList}</ul>
-    </div>;
+    return (
+      <div>
+        <button onClick={this.fetchManifest}>Refresh Manifest</button>
+        <ul>{manifestList}</ul>
+      </div>
+    );
   }
 }

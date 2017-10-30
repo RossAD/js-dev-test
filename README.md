@@ -33,7 +33,7 @@ The **back-end** is Express 4. Nothing special going here.
 
 ## Requirements
 
-- [ ] **Get manifest API**
+- [x] **Get manifest API**
 
   We need to serve the data to our React client; we'll use Express for that. The `./api` folder should have everything you need to make it work. Use `./api/manifest.json` as your data source.
 
@@ -43,13 +43,13 @@ The **back-end** is Express 4. Nothing special going here.
 
   payload: JSON Array
 
-- [ ] **Display manifest**
+- [x] **Display manifest**
 
   Now that we have an API, let's do something with it. In React, fetch the manifest from the API and display it in a list or table element. For each car in the parking lot, I want to see the make, model, color, and when they entered.
 
   Your React entry point is the `./components/Body.js` file. When the app is running, goto `http://localhost:3000` to see it renderd.
 
-- [ ] **Refresh manifest**
+- [x] **Refresh manifest**
 
   Let's pretend that our manifest is always changing; that being said, we need to be able to pull in a new list on demand. Create a button on the page that will get & load a fresh manifest from your api.
 
