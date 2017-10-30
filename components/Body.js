@@ -11,7 +11,14 @@ export default class Body extends React.Component {
   }
 
   async fetchManifest() {
-    const res = await fetch('/api/manifest');
+    const res = await fetch('/api/manifest/',
+      {
+        method:"GET",
+        headers:{
+          "Content-Type":"application/json"
+        }
+      }
+    );
     const manifest = await res.json();
     this.setState({ manifest });
   }
