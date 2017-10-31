@@ -1,5 +1,6 @@
 import React from 'react';
 import ManifestList from './ManifestList.js';
+import ReloadButton from './ReloadButton.js';
 
 export default class Body extends React.Component {
   constructor(props) {
@@ -15,14 +16,7 @@ export default class Body extends React.Component {
   }
 
   async fetchManifest() {
-    const res = await fetch('/api/manifest/',
-      {
-        method:"GET",
-        headers:{
-          "Content-Type":"application/json"
-        }
-      }
-    );
+    const res = await fetch('/api/manifest/');
     const manifest = await res.json();
     this.setState({ manifest });
   }
@@ -36,7 +30,7 @@ export default class Body extends React.Component {
     const { manifest } = this.state;
     return (
       <div>
-        <button onClick={this.handleClick}>Refresh Manifest</button>
+        <ReloadButton clickHandler={this.handleClick} />
         <ManifestList manifest={manifest} />
       </div>
     );

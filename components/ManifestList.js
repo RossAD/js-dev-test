@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ManifestList = ({manifest}) => (
+const ManifestList = ({ manifest }) => (
   <div className="container">
     <ul>
       {manifest.map(item => (
@@ -17,8 +17,8 @@ const ManifestList = ({manifest}) => (
     </ul>
     <style jsx global>{`
       .container {
-        width: 400px;
-        height: 800px;
+        width: 414px;
+        height: 700px;
         overflow: auto;
         border: 1px solid black;
         border-radius: 5px;
@@ -29,6 +29,10 @@ const ManifestList = ({manifest}) => (
         font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
         margin: 0;
         padding: 0;
+      }
+
+      strong {
+        color: #3f7fbf;
       }
        
       ul {
@@ -62,6 +66,13 @@ const ManifestList = ({manifest}) => (
       li a:hover {
         font-size: 30px;
         background: #f6f6f6;
+      }
+      @media only screen and (max-width: 414px) {
+        .container {
+          margin: 0 auto;
+          width: 90%;
+          height: 450px;
+        }  
       }
     `}
     </style>

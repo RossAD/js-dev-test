@@ -14,6 +14,8 @@ const client = next({ dev: NODE_ENV === 'development' });
 const clientHandler = client.getRequestHandler();
 const app = express();
 
+// CSRF protection with secure token in cookie and
+// additional header security with helmet
 app.use(cookieParser());
 app.use(csrf({ cookie: true }));
 app.disable('x-powered-by');
