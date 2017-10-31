@@ -17,6 +17,9 @@ const ManifestList = ({ manifest }) => (
     </ul>
     <style jsx global>{`
       .container {
+        display: flex;
+        justify-content: center;
+        margin: 0px auto;
         width: 414px;
         height: 700px;
         overflow: auto;

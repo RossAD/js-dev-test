@@ -7,6 +7,7 @@ const Title = ({ title }) => (
     <div className="line" />
     <style jsx global>{`
       h1 {
+        text-align: center;
         padding-bottom: 0;
         margin-bottom: 0;
         color: #4A5A69;

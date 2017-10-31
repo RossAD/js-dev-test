@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 const ReloadButton = ({ clickHandler }) => (
   <div className='buttonContainer'>
     <button onClick={clickHandler}>Refresh Manifest</button>
-    <style jsx global>{`
+    <style jsx>{`
       .buttonContainer {
-        margin: 20px;
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
       }
 
       button {
